@@ -4,6 +4,8 @@ A boilerplate for making quick dynamic websites using HoganJs and Stackable as A
 
 ## To develop
 
+- Make sure all HTML inside body is wrapped inside container with ID `stackable`
+
 We use NodeJs http-server to serve site in development, so make sure `http-server` is installed on your computer using:
 
 ```shell
