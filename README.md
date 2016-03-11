@@ -1,19 +1,13 @@
-# Stackable Hogan.js Boilerplate
+# Stackable Vue.js Boilerplate
 
-A boilerplate for making quick dynamic websites using HoganJs and Stackable as API.
+A quick boilerplate for making quick dynamic websites using VueJs and Stackable as API.
 
-## To develop
+## To publish
 
-- Make sure all HTML inside body is wrapped inside container with ID `stackable`
+Follow: [https://pages.github.com](https://pages.github.com)
 
-We use NodeJs http-server to serve site in development, so make sure `http-server` is installed on your computer using:
+## Todo
 
-```shell
-sudo npm install http-server -g
-```
-
-To view project in browser:
-
-```shell
-http-server YOUR-PROJECT-DIRECTORY
-```
+- make it better!
+- use bower to install stackable and vuejs lib
+- show loading icons while getting data on page

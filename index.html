@@ -1,28 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Stackable Hogan.js Boilerplate</title>
-  </head>
-  <body>
-    <div id="stackable">
-      <ul>
-        {{#projects}}
-          <li>{{data.Title}}</li>
-        {{/projects}}
-      </ul>
-    </div>
+<head>
+    <title>Stackable Vue.js Boilerplate</title>
+</head>
+<body>
+<div id="app">
+    <h2>My blog posts</h2>
+    <ul v-for="post in posts">
+        <li>{{ post.data.title }}</li>
+    </ul>
+</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/hogan.js/2.0.0/hogan.js"></script>
-    <script src="js/stackable.min.js"></script>
-    <script src="js/initHogan.js"></script>
-    
-    <script>
-      var stackable = new Stackable('GEG8F7LBGyDz');
-      stackable.getContainerItems('qnwesbEkW7kcjqzZ7', function (error, result) {
-        //console.log(error, result);
-        loadData({projects: result.data});
-      });
-    </script>
-  </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+<script src="js/stackable-min.js"></script>
+
+<script>
+    var stackable = new Stackable('kX8JddwDJqdf');
+
+    stackable.getAllItems(function (error, result) {
+        console.log(error, result);
+        new Vue({
+            el: '#app',
+            data: {
+                posts: result.data
+            }
+        })
+    });
+</script>
+</body>
 </html>
